@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 ENV HOME=/home/zoomrec \
-    TZ=Europe/Berlin \
+    TZ=KGT \
     TERM=xfce4-terminal \
     START_DIR=/start \
     DEBIAN_FRONTEND=noninteractive \
@@ -9,8 +9,11 @@ ENV HOME=/home/zoomrec \
     VNC_COL_DEPTH=24 \
     VNC_PW=zoomrec \
     VNC_PORT=5901 \
-    DISPLAY=:1
-
+    DISPLAY=:1 \
+	TELEGRAM_BOT_TOKEN=5136192859:AAHrGLT8JD-WfHCROZ-mxqvqYhbCYjQP9sc \
+	TELEGRAM_CHAT_ID=5077158262 \
+	DEBUG=True
+	
 # Add user
 RUN useradd -ms /bin/bash zoomrec -d ${HOME}
 WORKDIR ${HOME}
