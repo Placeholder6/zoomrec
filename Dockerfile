@@ -12,7 +12,8 @@ ENV HOME=/home/zoomrec \
     DISPLAY=:1 \
     TELEGRAM_BOT_TOKEN=5136192859:AAHrGLT8JD-WfHCROZ-mxqvqYhbCYjQP9sc \
     TELEGRAM_CHAT_ID=5077158262 \
-    DEBUG=True
+    DEBUG=True \
+    REC_PATH=${HOME}/recordings/
 	
 # Add user
 RUN useradd -ms /bin/bash zoomrec -d ${HOME}
@@ -126,6 +127,7 @@ ADD res/xfce.sh ${START_DIR}/xfce.sh
 # Add python script with resources
 ADD zoomrec.py ${HOME}/
 ADD res/img ${HOME}/img
+ADD example/meetings.csv ${HOME}/
 
 # Set permissions
 USER 0
