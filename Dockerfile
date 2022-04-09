@@ -41,9 +41,9 @@ RUN apt-get update && \
 # Generate locales for en_US.UTF-8
     locale-gen en_US.UTF-8 && \
 # Install tigervnc
-    wget -q -O tigervnc-1.10.1.i386.tar.gz https://sourceforge.net/projects/tigervnc/files/stable/1.10.1/tigervnc-1.10.1.i386.tar.gz && \
-    tar xz -f tigervnc-1.10.1.i386.tar.gz --strip 1 -C / && \
-    rm -rf tigervnc-1.10.1.i386.tar.gz && \
+    wget -q -O tigervnc-1.12.0-3-aarch64.pkg.tar.xz http://mirror.archlinuxarm.org/aarch64/community/tigervnc-1.12.0-3-aarch64.pkg.tar.xz && \
+    tar xvf -f tigervnc-1.12.0-3-aarch64.pkg.tar.xz --strip 1 -C / && \
+    rm -rf tigervnc-1.12.0-3-aarch64.pkg.tar.xz && \
 # Install xfce ui
     apt-get install --no-install-recommends -y \
         supervisor \
