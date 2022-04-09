@@ -42,7 +42,7 @@ RUN apt-get update && \
     locale-gen en_US.UTF-8 && \
 # Install tigervnc
     wget -q -O tigervnc-1.12.0-3-aarch64.pkg.tar.xz http://fl.us.mirror.archlinuxarm.org/aarch64/community/tigervnc-1.12.0-3-aarch64.pkg.tar.xz && \
-    tar xvf -f tigervnc-1.12.0-3-aarch64.pkg.tar.xz --strip 1 -C / && \
+    tar xvf tigervnc-1.12.0-3-aarch64.pkg.tar.xz --strip 1 -C / && \
     rm -rf tigervnc-1.12.0-3-aarch64.pkg.tar.xz && \
 # Install xfce ui
     apt-get install --no-install-recommends -y \
