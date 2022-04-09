@@ -1,4 +1,4 @@
-FROM anujdatar/box86
+FROM derpychap/box64-docker
 
 ENV HOME=/home/zoomrec \
     TZ=KGT \
