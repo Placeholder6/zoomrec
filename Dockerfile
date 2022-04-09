@@ -33,6 +33,7 @@ RUN apt-get update && \
         locales \
         bzip2 \
         xz-utils \
+        gcc \
         tzdata && \
 # Generate locales for en_US.UTF-8
     locale-gen en_US.UTF-8 && \
