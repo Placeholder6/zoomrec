@@ -51,8 +51,7 @@ RUN apt-get update && \
         xfce4 \
         xfce4-goodies \
         xfce4-pulseaudio-plugin \
-        xfce4-terminal \
-        xubuntu-icon-theme && \
+        xfce4-terminal && \
 # Install pulseaudio
     apt-get install --no-install-recommends -y \
         pulseaudio \
