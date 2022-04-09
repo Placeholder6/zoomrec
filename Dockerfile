@@ -123,8 +123,6 @@ USER zoomrec
 
 # Add home resources
 ADD res/home/ ${HOME}/
-ADD res/zoom.desktop ${HOME}/Desktop/
-ADD res/vlc.desktop ${HOME}/Desktop/
 
 # Add startup
 ADD res/entrypoint.sh ${START_DIR}/entrypoint.sh
