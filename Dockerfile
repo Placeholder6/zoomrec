@@ -37,6 +37,7 @@ RUN apt-get update && \
         wget \
         locales \
         bzip2 \
+	xz-utils \
         tzdata && \
 # Generate locales for en_US.UTF-8
     locale-gen en_US.UTF-8 && \
@@ -86,8 +87,7 @@ RUN apt-get update && \
         libxslt1.1 \
         libsqlite3-0 \
         libxcb-keysyms1 \
-        libxcb-xtest0 \
-	xz-utils && \
+        libxcb-xtest0 && \
 # Install Zoom
     apt-get install libxcb-xtest0 && \
     wget -q -O zoom_i686.tar.xz https://zoom.us/client/5.4.53391.1108/zoom_i686.tar.xz && \
