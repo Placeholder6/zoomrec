@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM derpychap/box64-docker
 
 ENV HOME=/home/zoomrec \
     TZ=KGT \
