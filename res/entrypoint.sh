@@ -6,7 +6,7 @@ cleanup () {
     kill -s SIGTERM $!
     exit 0
 }
-trap cleanup SIGINT SIGTERM
+trap cleanup INT SIGTERM
 
 VNC_IP=$(hostname -i)
 
