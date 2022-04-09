@@ -88,7 +88,7 @@ RUN apt-get update && \
         libxcb-keysyms1 \
         libxcb-xtest0 && \
 # Install Zoom
-RUN apt-get install libxcb-xtest0 && \
+    apt-get install libxcb-xtest0 && \
     wget -q -O zoom_i686.tar.xz https://zoom.us/client/5.4.53391.1108/zoom_i686.tar.xz && \
     tar xvf zoom_i686.tar.xz && \
     mv zoom /opt && \
