@@ -41,8 +41,7 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y \
         tigervnc-standalone-server \
         tigervnc-xorg-extension \
-        tigervnc-viewer \
-        tigervnc-common && \
+        tigervnc-viewer && \
 # Install xfce ui
     apt-get install --no-install-recommends -y \
         supervisor \
