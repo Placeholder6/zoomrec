@@ -32,13 +32,13 @@ RUN apt-get update && \
         wget \
         locales \
         bzip2 \
+        xz-utils \
         tzdata && \
 # Generate locales for en_US.UTF-8
     locale-gen en_US.UTF-8 && \
 # Install tigervnc
-    wget -q -O tigervnc-1.10.0.x86_64.tar.gz https://sourceforge.net/projects/tigervnc/files/stable/1.10.0/tigervnc-1.10.0.x86_64.tar.gz && \
-    tar xz -f tigervnc-1.10.0.x86_64.tar.gz --strip 1 -C / && \
-    rm -rf tigervnc-1.10.0.x86_64.tar.gz && \
+    apt-get install --no-install-recommends -y \
+        tigervnc-standalone-server && \
 # Install xfce ui
     apt-get install --no-install-recommends -y \
         supervisor \
@@ -83,10 +83,13 @@ RUN apt-get update && \
         libxcb-keysyms1 \
         libxcb-xtest0 && \
 # Install Zoom
-    wget -q -O zoom_amd64.deb https://zoom.us/client/latest/zoom_amd64.deb && \
-    dpkg -i zoom_amd64.deb && \
-    apt-get -f install -y && \
-    rm -rf zoom_amd64.deb && \
+    apt-get install libxcb-xtest0 && \
+    wget -q -O zoom_i686.tar.xz https://zoom.us/client/5.4.53391.1108/zoom_i686.tar.xz && \
+    tar xvf zoom_i686.tar.xz && \
+    mv zoom /opt && \
+    chmod +x /opt/zoom/zoom && \
+    ln -s /opt/zoom/zoom /usr/bin/zoom && \
+    rm zoom_i686.tar.xz && \
 # Install FFmpeg
     apt-get install --no-install-recommends -y \
         ffmpeg \
