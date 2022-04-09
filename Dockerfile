@@ -39,7 +39,7 @@ RUN apt-get update && \
     locale-gen en_US.UTF-8 && \
 # Install tigervnc
     apt-get install --no-install-recommends -y \
-        tigervnc-common && \
+        tightvncserver && \
 # Install xfce ui
     apt-get install --no-install-recommends -y \
         supervisor \
